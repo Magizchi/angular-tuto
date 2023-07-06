@@ -1,0 +1,23 @@
+<div class="flex flex-row">
+  <div class="flex flex-col m-6 p-2">
+    <div class="border">
+      <div class="border cart">
+        <div class="input">
+          <input
+            #searchBox
+            (keyup)="search(searchBox.value)"
+            placeholder="Rechercher un pokemon"
+          />
+          <div>
+            <a
+              *ngFor="let pokemon of pokemons$ | async"
+              (click)="goToDetailPokemon(pokemon)"
+            >
+              {{ pokemon.name }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

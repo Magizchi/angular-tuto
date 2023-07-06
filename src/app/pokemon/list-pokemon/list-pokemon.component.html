@@ -1,0 +1,25 @@
+<section>
+  <app-search-pokemon></app-search-pokemon>
+</section>
+<section class="flex flex-wrap justify-center">
+    <div
+      class="border shadow-sm p-5 flex m-2 max-w-sm justify-around"
+      *ngFor="let pokemon of pokemonList"
+      pokemonBorderCard="red"
+      (click)="goToPokemon(pokemon)"
+    >
+      <img [src]="pokemon.picture" class="w-24" />
+      <div class="w-36">
+        <p>{{ pokemon.name }}</p>
+        <p>{{ pokemon.created | date : "dd/MM/yyyy" }}</p>
+        <span
+          *ngFor="let type of pokemon.types"
+          class="{{ type | pokemonTypeColor }}"
+        >
+          {{ type }}
+        </span>
+      </div>
+    </div>
+
+    <a class="bg-violet-700 rounded-full w-48" routerLink="/pokemons/add">Ajouter Pokemon</a>
+  </section>
