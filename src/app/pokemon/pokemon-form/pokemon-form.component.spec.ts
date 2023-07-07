@@ -8,8 +8,8 @@ describe('PokemonFormComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PokemonFormComponent]
-    });
+    imports: [PokemonFormComponent]
+});
     fixture = TestBed.createComponent(PokemonFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

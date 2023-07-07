@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
-  selector: '[pokemonBorderCard]',
+    selector: '[pokemonBorderCard]',
+    standalone: true,
 })
 export class BorderCardDirective {
   constructor(private element: ElementRef) {

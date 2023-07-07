@@ -8,8 +8,8 @@ describe('SearchPokemonComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SearchPokemonComponent]
-    });
+    imports: [SearchPokemonComponent]
+});
     fixture = TestBed.createComponent(SearchPokemonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
