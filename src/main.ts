@@ -1,10 +1,8 @@
-
-
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
-import { provideRouter, Routes } from '@angular/router';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { Routes, provideRouter } from '@angular/router';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app/app.component';
 import { authGuard } from './app/auth.guard';
@@ -19,10 +17,12 @@ const routes: Routes = [
     },
     {
         path: 'login',
+        title: 'Login',
         loadComponent: () => import("./app/login/login.component").then((m) => m.LoginComponent),
     },
     {
         path: '**',
+        title: 'Page not found',
         loadComponent: () => import("./app/page-not-found/page-not-found.component").then((m) => m.PageNotFoundComponent),
     },
 ];

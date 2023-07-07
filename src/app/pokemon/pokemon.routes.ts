@@ -15,6 +15,7 @@ export default [
       },
       {
         path: 'pokemons',
+        title: 'Pokedex',
         loadComponent: () =>
           import('./list-pokemon/list-pokemon.component').then(
             (m) => m.ListPokemonComponent
@@ -29,6 +30,7 @@ export default [
       },
       {
         path: 'pokemons/add',
+        title: 'Add pokemon',
         loadComponent: () =>
           import('./add-pokemon/add-pokemon.component').then(
             (m) => m.AddPokemonComponent
